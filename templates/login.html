@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="../static/style.css">
+
+</head>
+<body>
+<h1>Login here</h1>
+
+{% with messages = get_flashed_messages() %}
+   {% for message in messages %}
+       <p>{{ message }}</p>
+   {% endfor %}
+
+{% endwith %}
+
+<a href="/"><button>Home</button></a>
+<a href="/login"><button>login</button></a>
+<a href="/register"><button>register</button></a>
+
+<form method="POST" action="">
+    <input name="u_email" placeholder="Enter email" type="email"><br><br>
+    <input name="u_pass" placeholder="Enter password" type="password"><br><br>
+    <input value="Login" type="submit"><br><br>
+</form>
+
+</body>
+</html>
